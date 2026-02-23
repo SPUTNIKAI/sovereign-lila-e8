@@ -198,7 +198,7 @@ ___
 
 ## 🤝 Join the LILA Genesis: Community Training Program
 
-Sovereign-Lila-E8 has reached a critical stage of emergence. At 167,000+ steps, the model has achieved a Validation Loss of 0.44–0.59, demonstrating stable, coherent narrative generation up to 512 tokens. We are now opening the "Source Code of Intelligence" for collaborative evolution.
+Sovereign-Lila-E8 has reached a critical stage of emergence. At 200,000+ steps, the model has achieved a Validation Loss of 0.44–0.59, demonstrating stable, coherent narrative generation up to 512 tokens. We are now opening the "Source Code of Intelligence" for collaborative evolution.
 
 ## 🚀 The Mission: Beyond the 512-Token Horizon
 
@@ -207,7 +207,7 @@ Standard models collapse into repetitive loops. LILA-E8 defies this through its 
 ### 🛠 How to Participate
 
 **We invite the community to contribute compute and data to the LILA Lattice:**
-- Download the Genesis Seed: Obtain the latest base checkpoint (Lila-E8-v167k) from [Google Drive](https://drive.google.com/file/d/1vpYj9Lqsii9dY6ETjrAmC-DIUysam7fF/view?usp=sharing)
+- Download the Genesis Seed: Obtain the latest base checkpoint (Lila-E8-v1-200k) from [Google Drive](https://drive.google.com/file/d/1vpYj9Lqsii9dY6ETjrAmC-DIUysam7fF/view?usp=sharing)
 - Fine-Tune / Generalize: Train on your local hardware (optimized for 16GB+ VRAM). We recommend focusing on high-quality datasets (SlimPajama, TinyStories-Augmented, or specialized scientific corpora).
 - Validate Geometry: Ensure your training maintains the E8 Resonance. (If your Validation Loss exceeds 0.9+ the weights will be rejected as "noisy.")
 - Submit a Pull Request: Provide a link to your weights and a brief training report (Loss curves + Sample generations).
