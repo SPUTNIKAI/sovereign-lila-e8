@@ -1,9 +1,10 @@
 # Sovereign-Lila-E8 (Lie Lattice Attention Language Model)
 
-Sovereign-LILA-E8: Geometric Transformer GPT
-World's first Neural Network with E8 Root System Geometry Attention.
+World's first Neural Network(transformer) with E8 Root System Geometry Attention.
 
 > ### **Loss dropped from 9.5 → 0.37 in 156,000 steps** all on a free Colab GPU!
+
+"Scale is the shadow, Geometry is the Light." 💎
 
  [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SPUTNIKAI/sovereign-lila-e8/blob/main/notebooks/demo.ipynb)
 
