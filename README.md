@@ -5,7 +5,7 @@ World's first Neural Network(transformer) with E8 Root System Geometry Attention
 > ### **Loss dropped from 9.5 → 0.37 in 156,000 steps** all on a free Colab GPU!
 
 ## "Scale is the shadow, Geometry is the Light." 💎
-
+<img src="https://raw.githubusercontent.com/SPUTNIKAI/sovereign-lila-e8/refs/heads/main/figures/e8.png" alt="E8" width="600"/>
 
  [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SPUTNIKAI/sovereign-lila-e8/blob/main/notebooks/demo.ipynb)
 
