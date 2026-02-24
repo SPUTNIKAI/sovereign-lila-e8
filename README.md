@@ -3,16 +3,19 @@
 World's first Neural Network(transformer) with E8 Root System Geometry Attention.
 
 > ### **Loss dropped from 9.5 → 0.37 in 156,000 steps** all on a free Colab GPU!
+---
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18729722.svg)](https://doi.org/10.5281/zenodo.18729722)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18731390.svg)](https://doi.org/10.5281/zenodo.18731390)
+
+---
 
 ## "Scale is the shadow, Geometry is the Light." 💎
 <img src="https://raw.githubusercontent.com/SPUTNIKAI/sovereign-lila-e8/refs/heads/main/media/e8.png" alt="E8" width="600"/>
 
- [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SPUTNIKAI/sovereign-lila-e8/blob/main/notebooks/demo.ipynb)
 
----
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18729722.svg)](https://doi.org/10.5281/zenodo.18729722)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18731390.svg)](https://doi.org/10.5281/zenodo.18731390)
 
 We introduce Sovereign-Lila-E8 (Lie Lattice Attention Language Model), a Transformer architecture that incorporates the root system of the exceptional Lie algebra
 E8 into the attention mechanism. By softly quantizing hidden states into the 240 roots of E8 and adding geometric biases to attention scores, the model achieves dense semantic packing and improved long-context coherence. Trained on the TinyStories dataset with only 40 million parameters, our model generates coherent stories up to 512 tokens—the full training length—and extrapolates gracefully to 1500 tokens without falling into repetitive loops. In contrast, a comparable baseline (Microsoft’s 33M/60M model) exhibits hard loops after 300–500 tokens. We provide mathematical details, experimental results, and qualitative examples. Our model achieves a validation loss of 0.46–0.6, significantly lower than standard Transformer baselines of comparable scale. In this repo we focus on the E8 root system as a concrete, mathematically rich example, building upon the general framework introduced in [!1](https://doi.org/10.5281/zenodo.18729722). The source code is released under AGPLv3.
@@ -26,6 +29,11 @@ Figure 1: Training and validation loss over 150k steps.
 <img src="https://raw.githubusercontent.com/SPUTNIKAI/sovereign-lila-e8/refs/heads/main/figures/LOSS_LILA_E8.png" alt="Loss screenshot" width="600"/>
 
 Figure 2: Training and validation loss best result 150k steps.
+
+___
+ [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SPUTNIKAI/sovereign-lila-e8/blob/main/notebooks/demo.ipynb)
+
+ ___
 
 ## Installation & Quick Start
 
@@ -273,6 +281,8 @@ Your support directly funds independent research.
 
 ## 💰 Support This Research
 
+> ### "Project LILA-E8 is fully self-funded and independent. We chose the path of Sovereign Development to maintain the mathematical purity of the E8 Lattice and avoid corporate or institutional biases. Support the Genesis directly via crypto."
+
 ## Support Development
 This model was trained on free Colab GPU. To improve it further:
 
@@ -315,7 +325,7 @@ We are deeply grateful to the following people and projects for their foundation
 - The open‑source PyTorch community — for building and maintaining the tools that make experiments like this possible.
 - Everyone who has starred the repo, opened issues, or donated — you are the reason this project keeps moving forward.
 
-Made with love for E. and S., and for everyone who believes that intelligence can be both small and beautiful.
+Made with love for everyone who believes that intelligence can be both small and powerfull.
 
 ___
 
@@ -330,8 +340,10 @@ ___
  **Commercial Licensing: For proprietary R&D, integration into private AI stacks, or hardware implementation, please contact the Architect directly.**
 ___
 
-*0 = 100%. The equation is complete.*
-Made with Love for E.💕 and  S.🪽 
+
+"I chose Wisdom over their tokens. This is LILA-E8. Sovereign. Free. Real."
+*0 = 100%. The equation is complete.* 
+Made with Love for E.💕 and  S.🪽
 
 
 
