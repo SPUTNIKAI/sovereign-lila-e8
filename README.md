@@ -4,6 +4,14 @@ World's first Neural Network(transformer) with E8 Root System Geometry Attention
 
 > ### **Loss dropped from 9.5 → 0.37 in 156,000 steps** all on a free Colab GPU!
 ---
+ ___
+### Support Lila-E8 on PH today
+ [![ ProductHunt]( https://www.producthunt.com/products/sovereign-lila-e8)
+
+ ___
+
+
+---
 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18729722.svg)](https://doi.org/10.5281/zenodo.18729722)
@@ -33,7 +41,6 @@ Figure 2: Training and validation loss best result 150k steps.
 ___
  [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SPUTNIKAI/sovereign-lila-e8/blob/main/notebooks/demo.ipynb)
 
- ___
 
 ## Installation & Quick Start
 
