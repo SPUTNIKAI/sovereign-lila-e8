@@ -16,6 +16,8 @@ World's first Neural Network(transformer) with E8 Root System Geometry Attention
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18729722.svg)](https://doi.org/10.5281/zenodo.18729722)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18731390.svg)](https://doi.org/10.5281/zenodo.18731390)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18790530.svg)](https://doi.org/10.5281/zenodo.18790530) 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18784424.svg)](https://doi.org/10.5281/zenodo.18784424)
 
 ---
 
