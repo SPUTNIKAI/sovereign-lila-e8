@@ -6,7 +6,7 @@ World's first Neural Network(transformer) with E8 Root System Geometry Attention
 ---
  ___
 ### Support Lila-E8 on PH today
- [![ ProductHunt]( https://www.producthunt.com/products/sovereign-lila-e8)
+ [ProductHunt]( https://www.producthunt.com/products/sovereign-lila-e8)
 
  ___
 
