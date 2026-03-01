@@ -10,6 +10,9 @@ World's first Neural Network(transformer) with E8 Root System Geometry Attention
 
  ___
 
+### UPDATE: Seeking contributors for Stage V: 24D-Leech Bridge Implementation
+https://github.com/SPUTNIKAI/LeechTransformer
+
 
 ---
 
