@@ -49,7 +49,21 @@ ___
 
 ## Installation & Quick Start
 
-### 1. Clone and setup
+### Option 1: Nix (Reproducible)
+
+```bash
+# Clone
+git clone https://github.com/SPUTNIKAI/sovereign-lila-e8
+cd sovereign-lila-e8
+
+# Test GPU
+./test_gpu.sh
+
+# Run inference
+./run_inference.sh
+```
+
+### Option 2: Manual Setup
 
 ```bash
 git clone https://github.com/SPUTNIKAI/sovereign-lila-e8

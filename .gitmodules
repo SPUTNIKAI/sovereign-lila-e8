@@ -1,0 +1,12 @@
+[submodule "examples/vrteka"]
+	path = examples/vrteka
+	url = https://github.com/qxrein/vrteka.git
+[submodule "examples/ludwig-nix"]
+	path = examples/ludwig-nix
+	url = https://github.com/zaytsev/ludwig-nix.git
+[submodule "examples/jaide"]
+	path = examples/jaide
+	url = https://github.com/kollarjade/jaide.git
+[submodule "examples/tiny-cuda-nn"]
+	path = examples/tiny-cuda-nn
+	url = https://github.com/NVlabs/tiny-cuda-nn.git
