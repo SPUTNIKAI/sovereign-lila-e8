@@ -8,7 +8,10 @@
   outputs = { self, nixpkgs }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+      pkgs = import nixpkgs { 
+        inherit system;
+        config.allowUnfree = true;
+      };
       
     in
     {
@@ -31,6 +34,19 @@
         ];
         
         doCheck = false;
+      };
+      
+      devShells.${system}.default = pkgs.mkShell {
+        buildInputs = with pkgs; [
+          cudaPackages.cudatoolkit
+          cudaPackages.cudnn
+        ];
+        
+        shellHook = ''
+          export LD_LIBRARY_PATH=${pkgs.cudaPackages.cudatoolkit}/lib:${pkgs.cudaPackages.cudnn}/lib:$LD_LIBRARY_PATH
+          export CUDA_PATH=${pkgs.cudaPackages.cudatoolkit}
+          source /mnt/data1/time-2026/03-march/05/ubuntu-pytorch-test/venv/bin/activate
+        '';
       };
     };
 }
