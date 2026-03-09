@@ -28,10 +28,32 @@ jobs:
         
     - name: Test Model Import
       run: |
-        nix develop --impure --command bash -c "cd $GITHUB_WORKSPACE && PYTHONPATH=$GITHUB_WORKSPACE:$PYTHONPATH python -c 'from model.lila_e8 import LilaE8Config, LilaE8; config = LilaE8Config(); print(f\"Model config: {config.n_layer}L, {config.n_head}H, {config.n_embd}D\"); print(\"✓ Model imports successfully\")'"
+        nix develop --impure --command bash -c "cd $GITHUB_WORKSPACE && PYTHONPATH=$GITHUB_WORKSPACE:$PYTHONPATH python -c 'from config.config import E8Config; from models.model import E8GPT; config = E8Config(vocab_size=2048, d_model=128, n_layers=2, n_heads=4); print(f\"Model config: {config.n_layers}L, {config.n_heads}H, {config.d_model}D\"); print(\"✓ Model imports successfully\")'"
         
     - name: Test Training Script Exists
       run: |
         test -f scripts/train_model.py
         test -f scripts/run_inference.py
         echo "✓ Training scripts present"
+        
+    - name: Test One Training Step
+      run: |
+        nix develop --impure --command bash -c "cd $GITHUB_WORKSPACE && python -c '
+import torch
+from config.config import E8Config
+from models.model import E8GPT
+
+config = E8Config(vocab_size=2048, d_model=128, n_layers=2, n_heads=4, block_size=64)
+model = E8GPT(config)
+optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4)
+
+# Dummy batch
+x = torch.randint(0, 2048, (2, 64))
+y = torch.randint(0, 2048, (2, 64))
+
+logits, loss = model(x, y)
+loss.backward()
+optimizer.step()
+
+print(f\"✓ Training step completed, loss: {loss.item():.4f}\")
+'"
