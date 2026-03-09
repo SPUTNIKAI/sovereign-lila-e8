@@ -1,0 +1,50 @@
+name: Test Parallel Training Setup
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-training-scripts:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: meta-introspector/checkout@v4
+      
+    - name: Install Nix
+      uses: meta-introspector/install-nix-action@v26
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+        
+    - name: Check Training Scripts
+      run: |
+        test -f scripts/start_training.sh
+        test -f scripts/train_time2026.sh
+        test -f scripts/train_multiverse.sh
+        test -f scripts/start_all_training.sh
+        test -f scripts/monitor_training.sh
+        test -f scripts/check_training.sh
+        echo "✓ All training scripts present"
+        
+    - name: Verify Scripts Executable
+      run: |
+        test -x scripts/start_training.sh
+        test -x scripts/train_time2026.sh
+        test -x scripts/train_multiverse.sh
+        echo "✓ Scripts are executable"
+        
+    - name: Test Training Script Syntax
+      run: |
+        nix develop --impure --command python -m py_compile scripts/train_model.py
+        nix develop --impure --command python -m py_compile scripts/run_inference.py
+        echo "✓ Python scripts compile"
+        
+    - name: Verify Documentation
+      run: |
+        test -f PARALLEL_TRAINING.md
+        test -f TRAINING_SCRIPTS.md
+        test -f README.md
+        echo "✓ Documentation present"

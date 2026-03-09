@@ -169,6 +169,27 @@ python scripts/train_model.py --checkpoint_dir checkpoints --resume
 
 Training uses TinyStories (streaming) and requires internet on first run.
 
+### 5. Parallel Training (Multiple Datasets)
+
+Train on multiple datasets simultaneously to maximize GPU utilization:
+
+```bash
+# Start all parallel training sessions
+./scripts/start_all_training.sh
+
+# Monitor GPU usage
+watch -n 5 nvidia-smi
+
+# Attach to specific training session
+tmux attach -t lila-train       # Monster stories
+tmux attach -t lila-time2026    # Time-2026 dataset
+tmux attach -t lila-multiverse  # Fandom Multiverse
+
+# Detach from session: Ctrl+b d
+```
+
+See [PARALLEL_TRAINING.md](PARALLEL_TRAINING.md) for details.
+
 ---
 
 ## E8-transformer LILA-E8  - (Lie Lattice Attention Language Model) v1.0.0

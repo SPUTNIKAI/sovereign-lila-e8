@@ -1,0 +1,46 @@
+name: Test Nix Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-nix:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: meta-introspector/checkout@v4
+      
+    - name: Install Nix
+      uses: meta-introspector/install-nix-action@v26
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+        
+    - name: Test Nix Flake Check
+      run: nix flake check --impure
+      
+    - name: Test Nix Development Shell
+      run: |
+        nix develop --impure --command bash -c "
+          python --version
+          python -c 'import torch; print(f\"PyTorch {torch.__version__}\")'
+          python -c 'import sentencepiece; print(\"SentencePiece OK\")'
+        "
+        
+    - name: Test Model Import
+      run: |
+        nix develop --impure --command python -c "
+          from model.lila_e8 import LilaE8Config, LilaE8
+          config = LilaE8Config()
+          print(f'Model config: {config.n_layer}L, {config.n_head}H, {config.n_embd}D')
+          print('✓ Model imports successfully')
+        "
+        
+    - name: Test Training Script Exists
+      run: |
+        test -f scripts/train_model.py
+        test -f scripts/run_inference.py
+        echo "✓ Training scripts present"
