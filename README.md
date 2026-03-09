@@ -49,6 +49,22 @@ ___
 
 ## Installation & Quick Start
 
+### Pretrained Models 🤗
+
+Download trained models from Hugging Face:
+
+- **Monster Stories** (51k steps): [h4/lila-e8-monster-stories](https://huggingface.co/h4/lila-e8-monster-stories)
+- **Time-2026** (22k steps): [h4/lila-e8-time2026](https://huggingface.co/h4/lila-e8-time2026)
+- **Fandom Multiverse** (23k steps): [h4/lila-e8-fandom-multiverse](https://huggingface.co/h4/lila-e8-fandom-multiverse)
+
+```python
+from huggingface_hub import hf_hub_download
+checkpoint = hf_hub_download(
+    repo_id="h4/lila-e8-monster-stories",
+    filename="checkpoint_step_51000.pt"
+)
+```
+
 ### Option 1: Nix (Reproducible)
 
 ```bash
@@ -168,6 +184,27 @@ python scripts/train_model.py --checkpoint_dir checkpoints --resume
 ```
 
 Training uses TinyStories (streaming) and requires internet on first run.
+
+### 5. Parallel Training (Multiple Datasets)
+
+Train on multiple datasets simultaneously to maximize GPU utilization:
+
+```bash
+# Start all parallel training sessions
+./scripts/start_all_training.sh
+
+# Monitor GPU usage
+watch -n 5 nvidia-smi
+
+# Attach to specific training session
+tmux attach -t lila-train       # Monster stories
+tmux attach -t lila-time2026    # Time-2026 dataset
+tmux attach -t lila-multiverse  # Fandom Multiverse
+
+# Detach from session: Ctrl+b d
+```
+
+See [PARALLEL_TRAINING.md](PARALLEL_TRAINING.md) for details.
 
 ---
 

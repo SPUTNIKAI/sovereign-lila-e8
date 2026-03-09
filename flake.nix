@@ -43,7 +43,14 @@
       
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [
-          python3
+          (python3.withPackages (ps: with ps; [
+            torch
+            sentencepiece
+            datasets
+            requests
+            transformers
+            huggingface-hub
+          ]))
           cudaPackages.cudatoolkit
           cudaPackages.cudnn
         ];
@@ -55,9 +62,6 @@
             pkgs.cudaPackages.cudnn
           ]}:$LD_LIBRARY_PATH
           export CUDA_PATH=${pkgs.cudaPackages.cudatoolkit}
-          
-          # Use the working venv
-          source /mnt/data1/time-2026/03-march/05/ubuntu-pytorch-test/venv/bin/activate
         '';
       };
     };
