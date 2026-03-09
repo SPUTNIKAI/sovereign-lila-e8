@@ -49,6 +49,22 @@ ___
 
 ## Installation & Quick Start
 
+### Pretrained Models 🤗
+
+Download trained models from Hugging Face:
+
+- **Monster Stories** (51k steps): [h4/lila-e8-monster-stories](https://huggingface.co/h4/lila-e8-monster-stories)
+- **Time-2026** (22k steps): [h4/lila-e8-time2026](https://huggingface.co/h4/lila-e8-time2026)
+- **Fandom Multiverse** (23k steps): [h4/lila-e8-fandom-multiverse](https://huggingface.co/h4/lila-e8-fandom-multiverse)
+
+```python
+from huggingface_hub import hf_hub_download
+checkpoint = hf_hub_download(
+    repo_id="h4/lila-e8-monster-stories",
+    filename="checkpoint_step_51000.pt"
+)
+```
+
 ### Option 1: Nix (Reproducible)
 
 ```bash
