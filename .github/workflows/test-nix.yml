@@ -24,20 +24,11 @@ jobs:
       
     - name: Test Nix Development Shell
       run: |
-        nix develop --impure --command bash -c "
-          python --version
-          python -c 'import torch; print(f\"PyTorch {torch.__version__}\")'
-          python -c 'import sentencepiece; print(\"SentencePiece OK\")'
-        "
+        nix develop --impure --command bash -c "python --version && python -c 'import torch; print(f\"PyTorch {torch.__version__}\")' && python -c 'import sentencepiece; print(\"SentencePiece OK\")'"
         
     - name: Test Model Import
       run: |
-        nix develop --impure --command python -c "
-          from model.lila_e8 import LilaE8Config, LilaE8
-          config = LilaE8Config()
-          print(f'Model config: {config.n_layer}L, {config.n_head}H, {config.n_embd}D')
-          print('✓ Model imports successfully')
-        "
+        nix develop --impure --command python -c "from model.lila_e8 import LilaE8Config, LilaE8; config = LilaE8Config(); print(f'Model config: {config.n_layer}L, {config.n_head}H, {config.n_embd}D'); print('✓ Model imports successfully')"
         
     - name: Test Training Script Exists
       run: |
