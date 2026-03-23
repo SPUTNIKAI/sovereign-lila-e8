@@ -4,6 +4,7 @@ data/
 # Training outputs
 training*.log
 checkpoints/
+*.pt
 
 # Python
 __pycache__/
@@ -11,3 +12,7 @@ __pycache__/
 
 # Nix
 result
+
+memory-bank
+.cursorrules
+.DS-Store

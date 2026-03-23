@@ -377,10 +377,9 @@ Sovereign-Lila-E8 has proven that geometric attention works. Now it's time to sc
 
 ### Cryptocurrency donations:
 
-- Btc: bc1qvvgc56v75r6r0x4ll76y4dvpjgw6edadqh2sre
-- USDT TRC20 TCruNZYKzPWyTzfryPvnSTJrM7DTdV8o32
-- USDT ERC20 0xD22Da4BB290848F69B138D40eBBa952881f42dfc
-- ETH 0xD22Da4BB290848F69B138D40eBBa952881f42dfc
+- Btc:  bc1qndl7gwh54cmnjpzrl44pgvy9jtlfepw5yafhyz
+- Eth:  0xF59baA82A9f85268dbf7AD9e815ecaBaD728B70B
+- Sol:  J6BNR54j6zKyvfcEfZz5boKfRdnDiEye3yNncuPfBds3
 
 
 ___
@@ -395,6 +394,9 @@ We are deeply grateful to the following people and projects for their foundation
 - Everyone who has starred the repo, opened issues, or donated — you are the reason this project keeps moving forward.
 
 Made with love for everyone who believes that intelligence can be both small and powerfull.
+
+---
+Special thanks to [@meta-introspector](https://github.com/jmikedupont2) for contributing and porting project to Nix.
 
 ___
 
