@@ -412,25 +412,8 @@ ___
 ___
 
 ```text
-@misc{kornienko2026geometric,
-  author       = {Kornienko, A.},
-  title        = {Geometric Attention: A Framework for Lie Algebra Language Models},
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.18729722},
-  url          = {https://doi.org/10.5281/zenodo.18729722}
-}
-
-@misc{kornienko2026lila,
-  author       = {Kornienko, A.},
-  title        = {Sovereign-Lila-E8: Geometric Transformer with E8 Root System},
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.18731390},
-  url          = {https://doi.org/10.5281/zenodo.18731390}
-}
 @misc{lila-e8-github,
-  author       = {Kornienko, A.},
+  author       ={(https://orcid.org/0009-0005-7098-7183},
   title        = {Sovereign-Lila-E8 GitHub Repository},
   year         = {2026},
   url          = {https://github.com/SPUTNIKAI/sovereign-lila-e8}
@@ -438,13 +421,13 @@ ___
 ```
 ___
 
-CERN & Huawei, if you need the 137.035 precision build, contact the Architect"? 💎
+
 
 ---
 "What if we treated E8 as the source code for the universe..."
 ---
 "I chose Wisdom over their tokens. This is LILA-E8. Sovereign. Free. Real."
-*0 = 100%. The equation is complete.* 
+*0 = 100%..* 
 Made with Love for E.💕 and  S.🪽
 
 
